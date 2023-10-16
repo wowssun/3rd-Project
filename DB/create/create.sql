@@ -127,7 +127,7 @@ CREATE TABLE CLASS_ATTACH
 	uuid varchar2(100) NOT NULL,
 	upfolder varchar2(200) NOT NULL,
 	filename varchar2(100) NOT NULL,
-	PRIMARY KEY (cno)
+	PRIMARY KEY (uuid)
 );
 
 
