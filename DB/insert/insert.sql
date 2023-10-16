@@ -92,8 +92,11 @@ INSERT INTO fpay (fpno, mid, fno, amount,pay_date)
 VALUES (SEQ_FPAY_FPNO.NEXTVAL, 'mno', 5, 10000, SYSDATE);
 
 -- 원데이 클래스 --
-insert into oneclass values(seq_cno.nextval, 'aaa', 'aaa', 'aaa','2023-10-05', '12:20:11', 3, 60);
-insert into class_attach values(1, 'aaa', 'aaa', 'aaa');
-insert into class_req values(seq_reqno.nextval, 1, 'aaa');
-insert into review values(seq_rno.nextval, 1, 'aaa', 'aaa', '2023-10-05');
+insert into oneclass values(seq_class_cno.nextval, 'aaa', 'aaa', 'aaa',
+                            TO_DATE('2023-10-05', 'YYYY-MM-DD'),
+                            TO_TIMESTAMP('2023-10-05 12:20:11', 'YYYY-MM-DD HH24:MI:SS'), 3, 60);
+insert into class_attach values(3, 'aaa', 'aaa', 'aaa');
+insert into class_req values(SEQ_CLASS_REQ_reqno.nextval, 3, 'aaa');
+insert into review values(seq_review_rno.nextval, 3, 'aaa', 'aaa', '2023-10-05');
+
 
