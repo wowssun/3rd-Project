@@ -79,7 +79,7 @@ CREATE TABLE A_MEMBER
 	pw varchar2(30) NOT NULL,
 	phone varchar2(30) NOT NULL,
 	email varchar2(50) NOT NULL,
-	reg_date date DEFAULT SYSDATE NOT NULL,
+	join_date DEFAULT SYSDATE NOT NULL,
 	stop_date date DEFAULT SYSDATE NOT NULL,
 	PRIMARY KEY (mid)
 );
