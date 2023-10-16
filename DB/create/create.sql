@@ -80,7 +80,7 @@ CREATE TABLE A_MEMBER
 	phone varchar2(30) NOT NULL,
 	email varchar2(50) NOT NULL,
 	join_date date DEFAULT SYSDATE NOT NULL,
-	stop_date date DEFAULT SYSDATE NOT NULL,
+	stop_date date DEFAULT SYSDATE,
 	PRIMARY KEY (mid)
 );
 
