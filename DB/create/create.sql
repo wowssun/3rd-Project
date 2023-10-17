@@ -74,7 +74,7 @@ CREATE TABLE A_MEMBER
 (
 	mid varchar2(20) NOT NULL,
 	name varchar2(20) NOT NULL,
-	pw varchar2(30) NOT NULL,
+	pw varchar2(100) NOT NULL,
 	phone varchar2(30) NOT NULL,
 	email varchar2(50) NOT NULL,
 	join_date date DEFAULT SYSDATE NOT NULL,
