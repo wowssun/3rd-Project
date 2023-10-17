@@ -43,7 +43,6 @@ CREATE TABLE ARTIST
 	PRIMARY KEY (mid)
 );
 
-
 CREATE TABLE AUC
 (
 	ano number NOT NULL,
@@ -67,10 +66,9 @@ CREATE TABLE AUC
 CREATE TABLE AUTH
 (
 	mid varchar2(20) NOT NULL,
-	authority varchar2(20) NOT NULL,
+	authority varchar2(20) DEFAULT 'ROLE_USER' NOT NULL,
 	PRIMARY KEY (mid)
 );
-
 
 CREATE TABLE A_MEMBER
 (
@@ -81,6 +79,7 @@ CREATE TABLE A_MEMBER
 	email varchar2(50) NOT NULL,
 	join_date date DEFAULT SYSDATE NOT NULL,
 	stop_date date DEFAULT SYSDATE,
+        enabled CHAR(1) DEFAULT '1',
 	PRIMARY KEY (mid)
 );
 
