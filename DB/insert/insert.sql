@@ -1,19 +1,19 @@
 -- 멤버  
 -- 비번 : 1234
 INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
-VALUES ('abc', '가나다', '1234', '010-0000-0000', 'abc@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), NULL);
+VALUES ('abc', '가나다', '$2a$12$9coqF.XYMTvO5VgZF6XvJ..sUl06fiEmtmRQEzGJe2hz7Sf7GODma', '010-0000-0000', 'abc@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), NULL);
 -- 비번 : 5678
 INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
-VALUES ('def', '라마바', '5678', '010-1111-1111', 'def@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), TO_DATE('2023-10-17', 'YYYY-MM-DD'));
+VALUES ('def', '라마바', '$2a$12$9bC8MJcr2wUyKWXmD0U6fOv4Ee15Pi0V9/h3/OTnpWpKB3klRFqbq', '010-1111-1111', 'def@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), TO_DATE('2023-10-17', 'YYYY-MM-DD'));
 --비번 : 9012
 INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
-VALUES ('ghi', '사아자', '9012', '010-2222-2222', 'ghi@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), NULL);
+VALUES ('ghi', '사아자', '$2a$12$50wv6lpXxCxwCzZ8QaySSeKucQYMnF49HPB5RkN8bwgLMjlk8Kt5i', '010-2222-2222', 'ghi@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), NULL);
 --비번 : 3456
 INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
-VALUES ('jkl', '차카타', '3456', '010-3333-3333', 'jkl@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), TO_DATE('2023-10-18', 'YYYY-MM-DD'));
+VALUES ('jkl', '차카타', '$2a$12$79k0/o3rASVGPlJV15KTnedJ3b6GVmS0ComgHcmlarkia4kCZvKIi', '010-3333-3333', 'jkl@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), TO_DATE('2023-10-18', 'YYYY-MM-DD'));
 --비번 : 1111
 INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
-VALUES ('admin', '관리자', '1111', '010-3333-3333', 'jkl@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), TO_DATE('2023-10-18', 'YYYY-MM-DD'));
+VALUES ('admin', '관리자', '$2a$12$Ivoa6NrXT1g7BHQ1iaiw9uAbjE7IQvHobQcY9SEVlZDKHaXUZt.pG', '010-3333-3333', 'jkl@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), TO_DATE('2023-10-18', 'YYYY-MM-DD'));
 
 -- 권한
 INSERT INTO AUTH (mid, authority)
