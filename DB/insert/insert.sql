@@ -1,24 +1,19 @@
 -- 멤버  
+-- 비번 : 1234
 INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
 VALUES ('abc', '가나다', '1234', '010-0000-0000', 'abc@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), NULL);
+-- 비번 : 5678
 INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
 VALUES ('def', '라마바', '5678', '010-1111-1111', 'def@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), TO_DATE('2023-10-17', 'YYYY-MM-DD'));
+--비번 : 9012
 INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
 VALUES ('ghi', '사아자', '9012', '010-2222-2222', 'ghi@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), NULL);
+--비번 : 3456
 INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
 VALUES ('jkl', '차카타', '3456', '010-3333-3333', 'jkl@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), TO_DATE('2023-10-18', 'YYYY-MM-DD'));
+--비번 : 1111
 INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
-VALUES ('mno', '파하아', '7890', '010-4444-4444', 'mno@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), NULL);
-INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
-VALUES ('pqr', '타파하', '2345', '010-5555-5555', 'pqr@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), NULL);
-INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
-VALUES ('stu', '카타바', '6789', '010-6666-6666', 'stu@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), TO_DATE('2023-10-19', 'YYYY-MM-DD'));
-INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
-VALUES ('vwx', '파라마', '1234', '010-7777-7777', 'vwx@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), NULL);
-INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
-VALUES ('yz1', '아카바', '5678', '010-8888-8888', 'yz1@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), NULL);
-INSERT INTO A_MEMBER (mid, name, pw, phone, email, join_date, stop_date)
-VALUES ('234', '타나하', '9012', '010-9999-9999', '234@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), NULL);
+VALUES ('admin', '관리자', '1111', '010-3333-3333', 'jkl@gmail.com', TO_DATE('2023-10-16', 'YYYY-MM-DD'), TO_DATE('2023-10-18', 'YYYY-MM-DD'));
 
 -- 권한
 INSERT INTO AUTH (mid, authority)
@@ -30,17 +25,8 @@ VALUES ('ghi', 'ROLE_ARTIST');
 INSERT INTO AUTH (mid, authority)
 VALUES ('jkl', 'ROLE_LOCK');
 INSERT INTO AUTH (mid, authority)
-VALUES ('mno', 'ROLE_USER');
-INSERT INTO AUTH (mid, authority)
-VALUES ('pqr', 'ROLE_ARTIST');
-INSERT INTO AUTH (mid, authority)
-VALUES ('stu', 'ROLE_LOCK');
-INSERT INTO AUTH (mid, authority)
-VALUES ('vwx', 'ROLE_USER');
-INSERT INTO AUTH (mid, authority)
-VALUES ('yz1', 'ROLE_ARTIST');
-INSERT INTO AUTH (mid, authority)
-VALUES ('234', 'ROLE_USER');
+VALUES ('admin', 'ROLE_ADMIN');
+
 
 
 -- 작품
