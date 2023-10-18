@@ -30,52 +30,53 @@ VALUES ('admin', 'ROLE_ADMIN');
 
 
 -- 작품
-INSERT INTO art (ano, mid, artist, art_name, genre, a_size, intro, art_img)
+INSERT INTO art (ano, mid, artist, artname, genre, asize, intro, artimg)
 VALUES (SEQ_ART_ANO.nextval, 'abc', '가나다', '가나다라', '드로잉', '100x100', '이 작품은 예시 작품입니다.', '0.jpeg');
 
-INSERT INTO art (ano, mid, artist, art_name, genre, a_size, intro, art_img)
+INSERT INTO art (ano, mid, artist, artname, genre, asize, intro, artimg)
 VALUES (SEQ_ART_ANO.nextval, 'ghi', '사아자', '마바사아', '페인팅', '120x80', '이 작품은 예시 작품입니다.', '1.jpeg');
 
-INSERT INTO art (ano, mid, artist, art_name, genre, a_size, intro, art_img)
+INSERT INTO art (ano, mid, artist, artname, genre, asize, intro, artimg)
 VALUES (SEQ_ART_ANO.nextval, 'mno', '파하아', '자차카타', '스케치', '90x90', '이 작품은 예시 작품입니다.', '2.jpeg');
 
-INSERT INTO art (ano, mid, artist, art_name, genre, a_size, intro, art_img)
+INSERT INTO art (ano, mid, artist, artname, genre, asize, intro, artimg)
 VALUES (SEQ_ART_ANO.nextval, 'pqr', '타파하', '타파하하', '콜라주', '70x120', '이 작품은 예시 작품입니다.', '3.jpeg');
 
-INSERT INTO art (ano, mid, artist, art_name, genre, a_size, intro, art_img)
+INSERT INTO art (ano, mid, artist, artname, genre, asize, intro, artimg)
 VALUES (SEQ_ART_ANO.nextval, 'vwx', '파라마', '파하하하', '믹스드미디어', '150x100', '이 작품은 예시 작품입니다.', '4.jpeg');
 
 -- 펀딩 --
-INSERT INTO fund (fno, mid, fund_name, pr, target_price, total_price, partcpnt_cnt, start_date, end_date)
+INSERT INTO fund (fno, mid, fundname, pr, targetprice, totalprice, partcpntcnt, startdate, enddate)
 VALUES (SEQ_FUND_FNO.NEXTVAL, 'abc', 'Fund 1', 'Description for Fund 1', 10000, 100000, 10, TO_DATE('2023-10-16', 'YYYY-MM-DD'), TO_DATE('2023-10-20', 'YYYY-MM-DD'));
 
-INSERT INTO fund (fno, mid, fund_name, pr, target_price, total_price, partcpnt_cnt, start_date, end_date)
+INSERT INTO fund (fno, mid, fundname, pr, targetprice, totalprice, partcpntcnt, startdate, enddate)
 VALUES (SEQ_FUND_FNO.NEXTVAL, 'ghi', 'Fund 2', 'Description for Fund 2', 15000, 200000, 20, TO_DATE('2023-10-17', 'YYYY-MM-DD'), TO_DATE('2023-10-22', 'YYYY-MM-DD'));
 
-INSERT INTO fund (fno, mid, fund_name, pr, target_price, total_price, partcpnt_cnt, start_date, end_date)
+INSERT INTO fund (fno, mid, fundname, pr, targetprice, totalprice, partcpntcnt, startdate, enddate)
 VALUES (SEQ_FUND_FNO.NEXTVAL, 'mno', 'Fund 3', 'Description for Fund 3', 20000, 300000, 30, TO_DATE('2023-10-18', 'YYYY-MM-DD'), TO_DATE('2023-10-23', 'YYYY-MM-DD'));
 
-INSERT INTO fund (fno, mid, fund_name, pr, target_price, total_price, partcpnt_cnt, start_date, end_date)
+INSERT INTO fund (fno, mid, fundname, pr, targetprice, totalprice, partcpntcnt, startdate, enddate)
 VALUES (SEQ_FUND_FNO.NEXTVAL, 'pqr', 'Fund 4', 'Description for Fund 4', 25000, 400000, 40, TO_DATE('2023-10-19', 'YYYY-MM-DD'), TO_DATE('2023-10-24', 'YYYY-MM-DD'));
 
-INSERT INTO fund (fno, mid, fund_name, pr, target_price, total_price, partcpnt_cnt, start_date, end_date)
+INSERT INTO fund (fno, mid, fundname, pr, targetprice, totalprice, partcpntcnt, startdate, enddate)
 VALUES (SEQ_FUND_FNO.NEXTVAL, 'vwx', 'Fund 5', 'Description for Fund 5', 30000, 500000, 50, TO_DATE('2023-10-20', 'YYYY-MM-DD'), TO_DATE('2023-10-25', 'YYYY-MM-DD'));
 
 -- 펀딩결제 --
-INSERT INTO fpay (fpno, mid, fno, amount,pay_date)
+INSERT INTO fpay (fpno, mid, fno, amount, paydate)
 VALUES (SEQ_FPAY_FPNO.NEXTVAL, 'abc', 1, 5000, SYSDATE);
 
-INSERT INTO fpay (fpno, mid, fno, amount,pay_date)
+INSERT INTO fpay (fpno, mid, fno, amount, paydate)
 VALUES (SEQ_FPAY_FPNO.NEXTVAL, 'abc', 2, 7000, SYSDATE);
 
-INSERT INTO fpay (fpno, mid, fno, amount,pay_date)
+INSERT INTO fpay (fpno, mid, fno, amount, paydate)
 VALUES (SEQ_FPAY_FPNO.NEXTVAL, 'ghi', 3, 5000, SYSDATE);
 
-INSERT INTO fpay (fpno, mid, fno, amount,pay_date)
+INSERT INTO fpay (fpno, mid, fno, amount, paydate)
 VALUES(SEQ_FPAY_FPNO.NEXTVAL, 'ghi', 4, 9000, SYSDATE);
 
-INSERT INTO fpay (fpno, mid, fno, amount,pay_date)
+INSERT INTO fpay (fpno, mid, fno, amount, paydate)
 VALUES (SEQ_FPAY_FPNO.NEXTVAL, 'mno', 5, 10000, SYSDATE);
+
 
 -- 원데이 클래스 --
 insert into oneclass values(seq_class_cno.nextval, 'aaa', 'aaa', 'aaa',
