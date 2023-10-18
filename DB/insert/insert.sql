@@ -53,13 +53,13 @@ INSERT INTO fund (fno, mid, fundname, pr, targetprice, totalprice, partcpntcnt, 
 VALUES (SEQ_FUND_FNO.NEXTVAL, 'ghi', 'Fund 2', 'Description for Fund 2', 15000, 200000, 20, TO_DATE('2023-10-17', 'YYYY-MM-DD'), TO_DATE('2023-10-22', 'YYYY-MM-DD'));
 
 INSERT INTO fund (fno, mid, fundname, pr, targetprice, totalprice, partcpntcnt, startdate, enddate)
-VALUES (SEQ_FUND_FNO.NEXTVAL, 'mno', 'Fund 3', 'Description for Fund 3', 20000, 300000, 30, TO_DATE('2023-10-18', 'YYYY-MM-DD'), TO_DATE('2023-10-23', 'YYYY-MM-DD'));
+VALUES (SEQ_FUND_FNO.NEXTVAL, 'abc', 'Fund 3', 'Description for Fund 3', 20000, 300000, 30, TO_DATE('2023-10-18', 'YYYY-MM-DD'), TO_DATE('2023-10-23', 'YYYY-MM-DD'));
 
 INSERT INTO fund (fno, mid, fundname, pr, targetprice, totalprice, partcpntcnt, startdate, enddate)
-VALUES (SEQ_FUND_FNO.NEXTVAL, 'pqr', 'Fund 4', 'Description for Fund 4', 25000, 400000, 40, TO_DATE('2023-10-19', 'YYYY-MM-DD'), TO_DATE('2023-10-24', 'YYYY-MM-DD'));
+VALUES (SEQ_FUND_FNO.NEXTVAL, 'ghi', 'Fund 4', 'Description for Fund 4', 25000, 400000, 40, TO_DATE('2023-10-19', 'YYYY-MM-DD'), TO_DATE('2023-10-24', 'YYYY-MM-DD'));
 
 INSERT INTO fund (fno, mid, fundname, pr, targetprice, totalprice, partcpntcnt, startdate, enddate)
-VALUES (SEQ_FUND_FNO.NEXTVAL, 'vwx', 'Fund 5', 'Description for Fund 5', 30000, 500000, 50, TO_DATE('2023-10-20', 'YYYY-MM-DD'), TO_DATE('2023-10-25', 'YYYY-MM-DD'));
+VALUES (SEQ_FUND_FNO.NEXTVAL, 'ghi', 'Fund 5', 'Description for Fund 5', 30000, 500000, 50, TO_DATE('2023-10-20', 'YYYY-MM-DD'), TO_DATE('2023-10-25', 'YYYY-MM-DD'));
 
 -- 펀딩결제 --
 INSERT INTO fpay (fpno, mid, fno, amount, paydate)
