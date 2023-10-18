@@ -154,13 +154,13 @@ CREATE TABLE FUND
 (
 	fno number NOT NULL,
 	mid varchar2(20) NOT NULL,
-	fund_name varchar2(100) NOT NULL,
+	fundname varchar2(100) NOT NULL,
 	pr varchar2(4000) NOT NULL,
 	targetprice number DEFAULT 0 NOT NULL,
 	totalprice number DEFAULT 0 NOT NULL,
 	partcpntcnt number DEFAULT 0 NOT NULL,
 	startdate date NOT NULL,
-	end_date date NOT NULL,
+	enddate date NOT NULL,
 	PRIMARY KEY (fno)
 );
 
