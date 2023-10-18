@@ -37,7 +37,7 @@ CREATE TABLE ARTIST
 (
 	mid varchar2(20) NOT NULL,
 	major varchar2(20) NOT NULL,
-	introduce varchar2(4000),
+	introduce varchar2(4000) NOT NULL,
 	career varchar2(4000) NOT NULL,
 	photo varchar2(30) NOT NULL,
 	PRIMARY KEY (mid)
