@@ -24,11 +24,11 @@ CREATE TABLE ART
 	ano number NOT NULL,
 	mid varchar2(20) NOT NULL,
 	artist varchar2(20) NOT NULL,
-	art_name varchar2(100) NOT NULL,
+	artname varchar2(100) NOT NULL,
 	genre varchar2(50) NOT NULL,
-	a_size varchar2(50) NOT NULL,
+	asize varchar2(50) NOT NULL,
 	intro varchar2(2000) NOT NULL,
-	art_img varchar2(100) NOT NULL,
+	artimg varchar2(100) NOT NULL,
 	PRIMARY KEY (ano)
 );
 
@@ -145,7 +145,7 @@ CREATE TABLE FPAY
 	mid varchar2(20) NOT NULL,
 	fno number NOT NULL,
 	amount number NOT NULL,
-	pay_date date DEFAULT SYSDATE NOT NULL,
+	paydate date DEFAULT SYSDATE NOT NULL,
 	PRIMARY KEY (fpno)
 );
 
@@ -156,10 +156,10 @@ CREATE TABLE FUND
 	mid varchar2(20) NOT NULL,
 	fund_name varchar2(100) NOT NULL,
 	pr varchar2(4000) NOT NULL,
-	target_price number DEFAULT 0 NOT NULL,
-	total_price number DEFAULT 0 NOT NULL,
-	partcpnt_cnt number DEFAULT 0 NOT NULL,
-	start_date date NOT NULL,
+	targetprice number DEFAULT 0 NOT NULL,
+	totalprice number DEFAULT 0 NOT NULL,
+	partcpntcnt number DEFAULT 0 NOT NULL,
+	startdate date NOT NULL,
 	end_date date NOT NULL,
 	PRIMARY KEY (fno)
 );
