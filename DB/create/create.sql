@@ -78,7 +78,7 @@ CREATE TABLE A_MEMBER
 	phone varchar2(30) NOT NULL,
 	email varchar2(50) NOT NULL,
 	join_date date DEFAULT SYSDATE NOT NULL,
-	stop_date date DEFAULT SYSDATE,
+	stop_date date DEFAULT NULL,
         enabled CHAR(1) DEFAULT '1',
 	PRIMARY KEY (mid)
 );
@@ -221,7 +221,7 @@ CREATE TABLE REQUEST
 	mid varchar2(20) NOT NULL,
 	state varchar2(10) DEFAULT '대기' NOT NULL,
 	request_date date DEFAULT SYSDATE,
-	comple_date date DEFAULT SYSDATE NOT NULL,
+	comple_date date DEFAULT NULL,
 	PRIMARY KEY (reque_no)
 );
 
