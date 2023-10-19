@@ -183,12 +183,12 @@ CREATE TABLE ONECLASS
 (
 	cno number NOT NULL,
 	mid varchar2(20) NOT NULL,
-	class_name varchar2(50) NOT NULL,
-	class_info varchar2(4000) NOT NULL,
-	class_date date NOT NULL,
-	class_time date NOT NULL,
-	people_num number NOT NULL,
-	running_time number NOT NULL,
+	classname varchar2(50) NOT NULL,
+	classinfo varchar2(4000) NOT NULL,
+	classdate date NOT NULL,
+	classtime date NOT NULL,
+	peoplenum number NOT NULL,
+	runningtime number NOT NULL,
 	PRIMARY KEY (cno)
 );
 
@@ -231,8 +231,8 @@ CREATE TABLE REVIEW
 	rno number NOT NULL,
 	cno number NOT NULL,
 	mid varchar2(20) NOT NULL,
-	review_script varchar2(4000) NOT NULL,
-	upload_date date DEFAULT SYSDATE NOT NULL,
+	reviewscript varchar2(4000) NOT NULL,
+	uploaddate date DEFAULT SYSDATE NOT NULL,
 	PRIMARY KEY (rno)
 );
 
