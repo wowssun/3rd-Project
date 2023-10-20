@@ -185,8 +185,8 @@ CREATE TABLE ONECLASS
 	mid varchar2(20) NOT NULL,
 	class_name varchar2(50) NOT NULL,
 	class_info varchar2(4000) NOT NULL,
-	class_date date NOT NULL,
-	class_time date NOT NULL,
+	class_date varchar2(30) NOT NULL,
+	class_time varchar2(30) NOT NULL,
 	people_num number NOT NULL,
 	running_time number NOT NULL,
 	PRIMARY KEY (cno)
