@@ -6,4 +6,5 @@
   <li>231018 - 외래키로 들어있는거 부모테이블에서 삭제되면 자식 테이블도 삭제되도록 ON DELETE CASCADE 추가함</li>
   <li>231018 - ARTIST 테이블 변경</li>
   <li>231017 - class_attach pk 변경, oneclass date,time 데이터 타입 varchar2로 변경(민경)</li>
+  <li>231023 - oneclass class_img 컬럼 추가</li>
 </ul>
