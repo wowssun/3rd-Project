@@ -7,4 +7,5 @@
   <li>231018 - ARTIST 테이블 변경</li>
   <li>231017 - class_attach pk 변경, oneclass date,time 데이터 타입 varchar2로 변경(민경)</li>
   <li>231023 - oneclass class_img 컬럼 추가</li>
+  <li>231024 - oneclass class_img not null로 변경, default추가</li>
 </ul>
