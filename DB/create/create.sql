@@ -207,7 +207,7 @@ CREATE TABLE PAY
 CREATE TABLE REPLY
 (
 	rno number NOT NULL,
-	bono number NOT NULL,
+	frno number NOT NULL,
 	mid varchar2(20) NOT NULL,
 	reply varchar2(1000) NOT NULL,
 	reg_date date DEFAULT SYSDATE NOT NULL,
