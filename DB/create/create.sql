@@ -28,7 +28,7 @@ CREATE TABLE ART
 	genre varchar2(50) NOT NULL,
 	asize varchar2(50) NOT NULL,
 	intro varchar2(2000) NOT NULL,
-	artimg varchar2(100) NOT NULL,
+	artimg varchar2(1000) NOT NULL,
 	PRIMARY KEY (ano)
 );
 
