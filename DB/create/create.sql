@@ -1,3 +1,17 @@
+/* -----------------------------시스템 계정----------------------- */
+
+--- 계정 생성 ---
+CREATE USER artAuction IDENTIFIED BY 1111;
+
+--- 권한 부여---
+GRANT CONNECT, RESOURCE, DBA TO artAuction;
+GRANT CREATE ANY JOB TO artAuction;
+
+-- 스케줄러러
+GRANT CREATE ANY JOB TO artAuction;
+
+/* -------------------------------------------------- */
+
 /* Create Sequences */
 
 CREATE SEQUENCE SEQ_ART_ano INCREMENT BY 1 START WITH 1;
@@ -434,6 +448,29 @@ END;
 ALTER TRIGGER "ARTAUCTION"."UPDATE_BID_PRICEC" ENABLE;
 
 
+-- 스케줄러
+
+BEGIN
+  DBMS_SCHEDULER.CREATE_JOB (
+    job_name        => 'AUC_UPDATE',
+    job_type        => 'PLSQL_BLOCK',
+    job_action      => 'BEGIN
+                          DELETE FROM "ARTAUCTION"."AUC"
+                          WHERE "ENDDATE" < SYSDATE AND BUYER IS NULL;
+
+                          UPDATE "ARTAUCTION"."AUC"
+                          SET "CONDITION" = CASE WHEN "ENDDATE" < SYSDATE THEN ''경매완료'' ELSE "CONDITION" END,
+                              "PAYSTATEMENT" = CASE WHEN "ENDDATE" < SYSDATE THEN ''결제중'' ELSE "PAYSTATEMENT" END,
+                              "PAYDATE" = CASE WHEN ("ENDDATE" < SYSDATE AND PAYDATE IS NULL) THEN ("ENDDATE"+14) ELSE PAYDATE END
+                          WHERE BUYER IS NOT NULL;
+
+                          COMMIT;
+                        END;',
+    start_date      => SYSTIMESTAMP,
+    repeat_interval => 'FREQ=DAILY; BYHOUR=0; BYMINUTE=0; BYSECOND=0;',
+    enabled         => TRUE,
+    comments        => 'AUC Cleanup Job');
+END;
 
 
 
