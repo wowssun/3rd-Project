@@ -7,7 +7,7 @@ CREATE USER artAuction IDENTIFIED BY 1111;
 GRANT CONNECT, RESOURCE, DBA TO artAuction;
 GRANT CREATE ANY JOB TO artAuction;
 
--- 스케줄러러
+-- 스케줄러
 GRANT CREATE ANY JOB TO artAuction;
 
 /* -------------------------------------------------- */
@@ -412,7 +412,7 @@ ALTER TABLE REVIEW
 
 /* Create Trigger */
 
--- 지희
+-- 지희--
 
 CREATE OR REPLACE TRIGGER update_totalprice_trigger
 AFTER INSERT ON FPAY
@@ -424,7 +424,7 @@ BEGIN
 END;
 
 
--- 지헌
+-- 지헌--
 
 CREATE OR REPLACE TRIGGER "ARTAUCTION"."TRG_UPDATE_ANSWERDATE" 
 BEFORE UPDATE OF ANSWER ON "ARTAUCTION"."INQ"
@@ -448,7 +448,7 @@ END;
 ALTER TRIGGER "ARTAUCTION"."UPDATE_BID_PRICEC" ENABLE;
 
 
--- 스케줄러
+-- 스케줄러--
 
 BEGIN
   DBMS_SCHEDULER.CREATE_JOB (
