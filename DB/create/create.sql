@@ -207,6 +207,7 @@ CREATE TABLE ONECLASS
 	people_num number NOT NULL,
 	running_time number NOT NULL,
 	class_img varchar2(200) DEFAULT 'default.png' NOT NULL,
+	reqcnt number DEFAULT 0 NOT NULL,
 	PRIMARY KEY (cno)
 );
 
