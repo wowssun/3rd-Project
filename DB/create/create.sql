@@ -186,7 +186,7 @@ CREATE TABLE INQ
 	mid varchar2(20) NOT NULL,
 	title varchar2(200) NOT NULL,
 	detail varchar2(2000) NOT NULL,
-	answer varchar2(2000) NOT NULL,
+	answer varchar2(2000),
 	writedate date DEFAULT SYSDATE NOT NULL,
 	updatedate date,
 	answerdate date,
