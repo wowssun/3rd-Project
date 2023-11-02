@@ -60,19 +60,19 @@ CREATE TABLE ARTIST
 CREATE TABLE AUC
 (
 	ano number NOT NULL,
-	aid varchar2(20) NOT NULL,
-	mid varchar2(20),
+	mid varchar2(20) NOT NULL,
 	artname varchar2(20) NOT NULL,
 	artist varchar2(20) NOT NULL,
 	startdate date DEFAULT SYSDATE NOT NULL,
 	enddate date NOT NULL,
 	payDate date,
-	cprice number NOT NULL,
-	eprice number,
-	intro varchar2(200) NOT NULL,
-	artimage varchar2(200) NOT NULL,
+	pricec number NOT NULL,
+	pricee number NOT NULL,
+	intro varchar2(2000) NOT NULL,
+	artimg varchar2(1000) NOT NULL,
 	condition varchar2(200) DEFAULT '경매중' NOT NULL,
 	paystatement varchar2(200) DEFAULT '결제 미완료' NOT NULL,
+	prices number,
 	PRIMARY KEY (ano)
 );
 
@@ -104,8 +104,10 @@ CREATE TABLE BID
 	mid varchar2(20) NOT NULL,
 	ano number NOT NULL,
 	priceB number NOT NULL,
-	priceC number NOT NULL,
-	paystatement date DEFAULT SYSDATE NOT NULL,
+	priceC number ,
+	biddate date DEFAULT SYSDATE NOT NULL, 
+	artname varchar2(20),
+	artimg varchar2(1000),
 	PRIMARY KEY (bno)
 );
 
