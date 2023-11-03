@@ -459,19 +459,23 @@ END;
 
 
 -- 스케줄러--
-
 BEGIN
-   DELETE FROM "ARTAUCTION"."AUC"
-    WHERE "ENDDATE" < SYSDATE AND BUYER IS NULL;
+  DBMS_SCHEDULER.CREATE_JOB (
+    job_name        => 'AUC_UPDATE',
+    job_type        => 'PLSQL_BLOCK',
+    job_action      => 'BEGIN
+                          DELETE FROM "ARTAUCTION"."AUC"
+                          WHERE "ENDDATE" < SYSDATE AND BUYER IS NULL;
 
-     UPDATE "ARTAUCTION"."AUC"
-      SET "CONDITION" = CASE WHEN "ENDDATE" < SYSDATE THEN '경매완료' ELSE "CONDITION" END,
-      "PAYDATE" = CASE WHEN ("ENDDATE" < SYSDATE AND PAYDATE IS NULL) THEN ("ENDDATE"+14) ELSE PAYDATE END
-      WHERE BUYER IS NOT NULL;
- END;
-
-
-
-
+                          UPDATE "ARTAUCTION"."AUC"
+                          SET "CONDITION" = CASE WHEN "ENDDATE" < SYSDATE THEN ''경매완료'' ELSE "CONDITION" END,
+                              "PAYDATE" = CASE WHEN ("ENDDATE" < SYSDATE AND PAYDATE IS NULL) THEN ("ENDDATE"+14) ELSE PAYDATE END
+                          WHERE BUYER IS NOT NULL;
+                        END;',
+    start_date      => SYSTIMESTAMP,
+    repeat_interval => 'FREQ=DAILY; BYHOUR=0; BYMINUTE=0; BYSECOND=0;',
+    enabled         => TRUE,
+    comments        => 'AUC Cleanup Job');
+END;
 
 
