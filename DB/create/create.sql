@@ -10,7 +10,9 @@ GRANT CREATE ANY JOB TO artAuction;
 -- 스케줄러
 GRANT CREATE ANY JOB TO artAuction;
 
+-- 트리거는 하나씩 생성하기
 /* -------------------------------------------------- */
+
 
 /* Create Sequences */
 
