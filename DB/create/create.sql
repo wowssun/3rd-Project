@@ -74,6 +74,7 @@ CREATE TABLE AUC
 	artimg varchar2(1000) NOT NULL,
 	condition varchar2(200) DEFAULT '경매중' NOT NULL,
 	paystatement varchar2(200) DEFAULT '결제중' NOT NULL,
+	buyer VARCHAR2(20 BYTE), 
 	prices number,
 	PRIMARY KEY (ano)
 );
