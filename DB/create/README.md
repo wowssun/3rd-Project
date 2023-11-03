@@ -10,5 +10,4 @@
   <li>231024 - oneclass class_img not null로 변경, default추가</li>
   <li>231029 - 자유게시판 관련 모두 수정</li>
   <li>231102 - oneclass reqcnt 컬럼 추가 (민경) </li>
-  <li>231103 - oneclass class_img 컬럼 null 허용으로 변경 (민경)</li>
 </ul>
