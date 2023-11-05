@@ -140,8 +140,8 @@ CREATE TABLE FREEATTACH
 (
 	uuid varchar2(100) NOT NULL,
 	frno number NOT NULL,
-	upfolder varchar2(200),
-	filename varchar2(100),
+	upFolder varchar2(200),
+	fileName varchar2(100),
 	image char NOT NULL,
 	PRIMARY KEY (uuid)
 );
