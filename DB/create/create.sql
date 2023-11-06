@@ -146,17 +146,6 @@ CREATE TABLE FREEATTACH
 	PRIMARY KEY (uuid)
 );
 
-
-CREATE TABLE CLASS_ATTACH
-(
-	cno number NOT NULL,
-	uuid varchar2(100) NOT NULL,
-	upfolder varchar2(200) NOT NULL,
-	filename varchar2(100) NOT NULL,
-	PRIMARY KEY (uuid)
-);
-
-
 CREATE TABLE CLASS_REQ
 (
 	reqno number NOT NULL,
@@ -252,17 +241,6 @@ CREATE TABLE REQUEST
 	request_date date DEFAULT SYSDATE,
 	comple_date date DEFAULT NULL,
 	PRIMARY KEY (reque_no)
-);
-
-
-CREATE TABLE REVIEW
-(
-	rno number NOT NULL,
-	cno number NOT NULL,
-	mid varchar2(20) NOT NULL,
-	review_script varchar2(4000) NOT NULL,
-	upload_date date DEFAULT SYSDATE NOT NULL,
-	PRIMARY KEY (rno)
 );
 
 
