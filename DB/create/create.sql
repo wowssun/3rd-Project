@@ -468,3 +468,24 @@ BEGIN
 END;
 
 
+BEGIN
+  DBMS_SCHEDULER.CREATE_JOB (
+    job_name        => 'PAYMENT_UPDATE',
+    job_type        => 'PLSQL_BLOCK',
+    job_action      => 'BEGIN
+                          -- 결제중인 데이터가 2개 이상인 경우 auth 테이블 업데이트
+                          IF (SELECT COUNT(*) FROM "ARTAUCTION"."AUC" WHERE "PAYSTATEMENT" = ''결제중'' AND "PAYDATE" < SYSDATE) >= 2 THEN
+                            UPDATE "ARTAUCTION"."AUTH"
+                            SET "ROLE" = ''role_rock'';
+
+                            -- a_member 테이블 업데이트
+                            UPDATE "ARTAUCTION"."A_MEMBER"
+                            SET "STOP_DATE" = SYSDATE;
+                          END IF;
+                        END;',
+    start_date      => SYSTIMESTAMP,
+    repeat_interval => 'FREQ=DAILY; BYHOUR=0; BYMINUTE=0; BYSECOND=0;',
+    enabled         => TRUE,
+    comments        => 'Payment Update Job');
+END;
+
